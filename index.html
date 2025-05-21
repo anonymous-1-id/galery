@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSSNEKA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://i.ibb.co.com/B5Zwc38m/1000061688-removebg-preview.png" type="image/x-icon">
+</head>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: url() no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: opacity(0.5);
+    z-index: -1; 
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+}
+.box{
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 5s forwards;
+}
+.container img {
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    opacity: 100%;
+}
+.container img.active {
+    opacity: 1;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+.fade-in-text {
+    font-size: 2em;
+    opacity: 0;
+    animation: fadeIn 4s forwards;
+}
+.animated-box{
+    width: 100px;
+    height: 100px;
+    transition: all 0.3s case-in-out;
+}
+@media (min-width: 600px) {
+    .box {
+        width: calc(50% - 10px);
+        margin: 5px;
+    }
+}
+@keyframes moveUpBlur {
+    0% {
+        top: 0;
+        filter: blur(0px);
+    }
+    100% {
+        top: -100px;
+        filter: blur(5px);
+    }
+}
+@media (min-width: 900px) {
+    .box {
+        width: calc(33.33% - 10px);
+        margin: 5px;
+    }
+}
+header, footer {
+    text-align: center;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+.social-links img:hover {
+    transform: scale(1.2);
+}
+.header {
+    position: relative;
+    text-align: center;
+    background-color: blue;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+}
+.menu {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(17, 17, 17, 0.8);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.menu a:hover {
+    color: #f1f1f1;
+}
+.menu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.menu-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    transition: transform 0.0s ease-in-out;
+}
+.menu-btn:hover {
+    transform: scale(1.1);
+}
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+body h4{
+    text-align: center;
+}
+.welcome-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    size: 20%;
+}
+.tombol {
+    color: white;
+    background-color: blue;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px; 
+    text-align: center;
+    font-size: 20px; 
+    padding: 6px 5px; 
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.box {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+@media (min-width: 600px) {
+    .box {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (min-width: 900px) {
+    .box {
+        width: calc(33.33% - 20px);
+    }
+}
+
+</style>
+</head>
+    <header class="fade-in-text header">
+        <img src="https://i.ibb.co.com/B5Zwc38m/1000061688-removebg-preview.png" style="position: absolute; top: 10px; left: 10px; width: 50px; height: 50px;">
+        <h6 style="margin: 0;">OSSNEKA</h6>
+<h6 style="margin: 5px 0;">(OSIS SMK Negeri 4 KLATEN)</h6>
+        <h6 style="margin: 5px 0;">Organisasi Siswa Intra Sekolah</h6>
+        <h6 style="margin: 5px 0;">SMK Negeri 4 KLATEN</h6>
+        <img src="https://i.ibb.co.com/9myGZQD4/Whats-App-Image-2024-11-15-at-15-52-03-a4e45878-removebg-preview.png" style="position: absolute; top: 10px; right: 10px; width: 50px; height: 50px;">
+        <button class="menu-btn" onclick="openNav()">☰</button>
+    </header>
+    <div id="mySidenav" class="menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="https://ossneka.github.io/ossneka">BERANDA</a>
+        <a href="https://anonymous-1-id.github.io/anggota">ANGGOTA</a>
+        <a href="https://anonymous-1-id.github.io/progja">PROGJA</a>
+        <a href="https://anonymous-1-id.github.io/galery">ALBUM</a>
+        <a href="https://anonymous-1-id.github.io/pembina">PEMBINA</a>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+        }
+    </script>
+<body>
+    <div class="container">
+    <div class="box">
+        <img src="https://upload-static.hoyoverse.com/hoyolab-wiki/2023/11/07/8459597/263e5ea0784d182b393f67a7e24146a5_1557025989132645732.png?x-oss-process=image%2Fformat%2Cwebp" alt="Foto 1">
+    </div>
+    <div class="box">
+        <img src="https://upload-static.hoyoverse.com/hoyolab-wiki/2023/11/07/8459597/263e5ea0784d182b393f67a7e24146a5_1557025989132645732.png?x-oss-process=image%2Fformat%2Cwebp" alt="Foto 1">
+    </div>
+    <div class="box">
+        <img src="https://upload-static.hoyoverse.com/hoyolab-wiki/2023/11/07/8459597/263e5ea0784d182b393f67a7e24146a5_1557025989132645732.png?x-oss-process=image%2Fformat%2Cwebp" alt="Foto 1">
+    </div>
+    <div class="box">
+        <img src="https://upload-static.hoyoverse.com/hoyolab-wiki/2023/11/07/8459597/263e5ea0784d182b393f67a7e24146a5_1557025989132645732.png?x-oss-process=image%2Fformat%2Cwebp" alt="Foto 1">
+    </div>
+    <div class="box">
+        <img src="https://upload-static.hoyoverse.com/hoyolab-wiki/2023/11/07/8459597/263e5ea0784d182b393f67a7e24146a5_1557025989132645732.png?x-oss-process=image%2Fformat%2Cwebp" alt="Foto 1">
+    </div>
+    <div class="box">
+        <img src="https://upload-static.hoyoverse.com/hoyolab-wiki/2023/11/07/8459597/263e5ea0784d182b393f67a7e24146a5_1557025989132645732.png?x-oss-process=image%2Fformat%2Cwebp" alt="Foto 1">
+    </div>
+    <div class="box">
+        <img src="https://upload-static.hoyoverse.com/hoyolab-wiki/2023/11/07/8459597/263e5ea0784d182b393f67a7e24146a5_1557025989132645732.png?x-oss-process=image%2Fformat%2Cwebp" alt="Foto 1">
+    </div>
+    <div class="box">
+        <img src="https://upload-static.hoyoverse.com/hoyolab-wiki/2023/11/07/8459597/263e5ea0784d182b393f67a7e24146a5_1557025989132645732.png?x-oss-process=image%2Fformat%2Cwebp" alt="Foto 1">
+    </div>
+    <div class="box">
+        <img src="https://upload-static.hoyoverse.com/hoyolab-wiki/2023/11/07/8459597/263e5ea0784d182b393f67a7e24146a5_1557025989132645732.png?x-oss-process=image%2Fformat%2Cwebp" alt="Foto 1">
+    </div>
+</div>
+
+</body>
+<footer style="background-color:blue">
+    <div class="social-links">
+        <a href="https://www.tiktok.com/@ossneka_" target="_blank">
+            <img src="https://i.ibb.co.com/V0Ftwwvr/th-2-removebg-preview.png" alt="TikTok" width="40" height="40" style="margin-right: 20px;">
+        </a>
+        <a href="https://www.instagram.com/ossneka_" target="_blank">
+            <img src="https://i.ibb.co.com/ZpqR0tfg/ig.png" alt="Instagram" width="30" height="30" style="margin-right: 20px;">
+        </a>
+        <a href="https://www.youtube.com/@OSSNEKA" target="_blank">
+            <img src="https://i.ibb.co.com/Wp6tN19D/th-3-removebg-preview.png" alt="YouTube" width="50" height="50">
+        </a>
+    </div>
+</footer>
+
+<footer>
+    OSSNEKA 2024/2025
+</footer>
+</html>
